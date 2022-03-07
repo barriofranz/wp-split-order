@@ -1,0 +1,313 @@
+ .gf_splitorder-form__label{
+     padding-left: 3px;
+ }
+
+.gf_splitorder .gf_splitorder-btn, .gf_splitorder .gf_splitorder-btn:hover {
+    background-color: #000;
+    border: 2px solid #000;
+    border-radius: 0;
+    color: #fff;
+    display: inline-block;
+    font-weight: 700;
+    font-family: var(--fnt-secondary);
+    letter-spacing: .5px;
+    line-height: 1 !important;
+    min-width: 120px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0.5em;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+.gf_splitorder-preview-btn:disabled {
+    opacity: 0.5;
+}
+
+.gf_splitorder .woocommerce {
+    padding: 20px;
+}
+
+
+.gf-splitoder-modals .container{
+    display: none;
+    width: 100% !important;
+    height: 100%;
+    position: fixed;
+    opacity: 0.9;
+    background: #222;
+    z-index: 40000;
+    top:0;
+    left: 0;
+    overflow: hidden;
+
+    animation-name: fadeIn_Container;
+    animation-duration: 1s;
+
+    max-width: 10000px;
+
+}
+
+.gf-splitoder-modals .modal{
+    display:none;
+    top: 0;
+    min-width: 250px;
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+    position: fixed;
+    z-index: 40001;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #000;
+    margin-top: 80px;
+    margin-left: 10%;
+
+    animation-name: fadeIn_Modal;
+    animation-duration: 0.8s;
+
+    flex-direction:column;
+}
+
+.gf-splitoder-modals .header{
+    width: 100%;
+    height: 70px;
+    border-radius: 10px 10px 0px 0px;
+    border-bottom: 2px solid #ccc;
+}
+
+.gf-splitoder-modals .header a{
+    text-decoration: none;
+    float: right;
+    line-height: 70px;
+    margin-right: 20px;
+    color: #aaa;
+}
+
+.gf-splitoder-modals .content{
+    width: 100%;
+    /* height: 320px; */
+    overflow-y:scroll;
+    flex:1;
+}
+
+
+.gf-splitoder-modals .footer{
+    width: 100%;
+    height: 80px;
+    border-radius: 0px 0px 10px 10px;
+    border-top: 2px solid #ccc;
+}
+
+.gf-splitoder-modals .footer .btn-group{
+    float: right;
+    margin: 20px;
+}
+
+.gf-splitoder-modals .cancel {
+    cursor: pointer;
+}
+.gf-splitoder-modals .fotter button{
+    float: right;
+    margin-right: 10px;
+    margin-top: 18px;
+    text-decoration: none;
+}
+
+tr.woocommerce-gf-splitorder-note1 {
+    background: #d96d0e!important;
+    color: #fff;
+}
+
+
+/****MEDIA QUERIES****/
+
+@media screen and (min-width: 600px){
+
+    .gf-splitoder-modals .modal{
+        /* width: 500px;
+        height: 600px;
+        margin-left: calc(50vw - 250px);
+        margin-top: calc(50vh - 350px); */
+
+        min-width: 500px;
+        height: calc(90% - 20px);
+        margin-top: 10%;
+    }
+
+
+    .gf-splitoder-modals .header{
+        width: 100%;
+        height: 40px;
+    }
+
+    .gf-splitoder-modals .header a{
+        line-height: 40px;
+        margin-right: 10px;
+    }
+
+    .gf-splitoder-modals .content{
+        width: 100%;
+        /* height: 530px; */
+    }
+
+    .gf-splitoder-modals .footer{
+        width: 100%;
+        /* height: 70px; */
+        height: 70px;
+    }
+
+    .gf-splitoder-modals .footer button{
+        float: right;
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+
+}
+.gf_splitorder-form__input-checkbox {
+    width: 27px;
+    height: 27px;
+    /* top: 10px; */
+    position: relative;
+    /* margin-bottom: 15px; */
+}
+
+/* Tooltip container */
+.gf-tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+/* Tooltip text */
+.gf-tooltip .gf-tooltiptext {
+    visibility: hidden;
+    width: 175px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    margin-left: 10px;
+    top: 100%;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.gf-tooltiptext-1 {
+    top: -5px;
+    left: 110%;
+    transform: translateY(-102%);
+}
+.gf-tooltiptext-2 {
+    top: -5px;
+    bottom: auto;
+    right: 120%;
+    transform: translateY(-60%);
+}
+
+.cart-collaterals .cart_totals table.shop_table_responsive, #order_review .shop_table.woocommerce-checkout-review-order-table {
+    overflow: visible !important;
+}
+
+
+.gf-tooltiptext-1::after {
+    content: "";
+    position: absolute;
+    top: 97%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-top-width: 5px;
+    border-right-width: 5px;
+    border-bottom-width: 5px;
+    border-left-width: 5px;
+    border-style: solid;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-color: transparent #000;
+    border-top-color: transparent;
+    border-right-color: #000;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+
+}
+.gf-tooltiptext-2::after {
+    content: "";
+    position: absolute;
+    top: 55%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #000;
+
+}
+/* Show the tooltip text when you mouse over the tooltip container */
+.gf-tooltip:hover .gf-tooltiptext-1 {
+    visibility: visible;
+}
+
+.gf-tooltip:hover .gf-tooltiptext-2 {
+    visibility: visible;
+}
+
+.question-icon {
+    content: '?';
+    display: inline-block;
+    font-family: sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 50%;
+    margin-left: 6px;
+    padding: 4px 7px;
+    border: 2px solid #d96d0e;
+    text-decoration: none;
+    cursor: pointer;
+    color: #d96d0e;
+}
+
+
+
+@keyframes fadeIn_Modal {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn_Container {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 0.9;
+  }
+}
+
+
+@media only screen and (min-width: 576px) {
+    /****ANIMATIONS****/
+    .gf-tooltip .gf-tooltiptext {
+        width: 300px;
+
+    }
+
+    .gf-tooltiptext-1::after {
+        top: 95%;
+
+    }
+    .gf-tooltiptext-2::after {
+        top: 52%;
+
+    }
+}
